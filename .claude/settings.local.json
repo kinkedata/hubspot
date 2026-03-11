@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python -c \"from PIL import Image; img = Image.open\\(''c:/laragon/www/CourtAvenue/hubspot/images/banner_superior.png''\\); print\\(img.size\\)\")",
+      "Bash(python3 -c \"from PIL import Image; img = Image.open\\(''c:/laragon/www/CourtAvenue/hubspot/images/banner_superior.png''\\); print\\(img.size\\)\")",
+      "Bash(identify c:/laragon/www/CourtAvenue/hubspot/images/banner_superior.png)"
+    ]
+  }
+}

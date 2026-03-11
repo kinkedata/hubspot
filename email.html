@@ -64,25 +64,26 @@
 
 
   <!-- ─────────────────────────────────────────────
-       1. HEADER: logo Telcel Empresas
+       1. HEADER: logo Telcel Empresas (reducido)
   ───────────────────────────────────────────── -->
   <tr>
-    <td align="center" style="background-color:#005EB8;padding:16px 30px;">
-      <!-- Sube tu logo a HubSpot Files y reemplaza este src -->
-      <img src="images/logo-telcel-empresas.png" alt="Telcel Empresas" width="200"
+    <td align="center" style="background-color:#0047fa;padding:10px 15px;">
+      <img src="images/logo-telcel-empresas.png" alt="Telcel Empresas" width="140"
            style="display:block;height:auto;margin:0 auto;">
     </td>
   </tr>
 
 
   <!-- ─────────────────────────────────────────────
-       2. HERO: imagen con título integrado
+       2. HERO: fondo azul continúa desde header
+       Sin padding lateral → imagen full-bleed a 600px
+       El azul del header se extiende detrás de la mitad superior
   ───────────────────────────────────────────── -->
   <tr>
-    <td style="background-color:#ffffff;padding:12px 12px 0 12px;">
-      <img src="images/imagen-1-1-.png"
+    <td style="background-color:#0047fa;padding:0 15px;font-size:0;line-height:0;">
+      <img src="images/banner_superior.png"
            alt="¿Qué está moviendo a las empresas más innovadoras?" width="576"
-           style="display:block;width:100%;height:auto;border-radius:12px;">
+           style="display:block;width:100%;height:auto;border-radius:14px;">
     </td>
   </tr>
 
@@ -91,7 +92,7 @@
        3. SALUDO + INTRO
   ───────────────────────────────────────────── -->
   <tr>
-    <td style="background-color:#ffffff;padding:28px 28px 10px 28px;">
+    <td style="background-color:#ffffff;padding:24px 15px 10px 15px;">
       <p style="margin:0 0 4px 0;font-family:Arial,Helvetica,sans-serif;font-size:17px;font-weight:700;color:#1a1a1a;text-align:right;">
         Estimado, {{ contact.firstname }} {{ contact.lastname }}
       </p>
@@ -107,17 +108,15 @@
 
   <!-- ─────────────────────────────────────────────
        4. TARJETA: Ubicación en tiempo real
-       Fondo azul claro con tarjeta blanca interior
-       Layout: TEXTO izquierda | IMAGEN derecha
-       Botón "Ver nota completa" sobre imagen (abajo derecha)
+       Texto izquierda (menor ancho) | Imagen derecha (mayor)
+       Botón "Ver nota completa" superpuesto sobre imagen (abajo derecha)
   ───────────────────────────────────────────── -->
   <tr>
-    <td style="background-color:#ffffff;padding:20px 16px 20px 16px;">
-      <!-- Tarjeta blanca -->
+    <td style="background-color:#ffffff;padding:16px 15px 16px 15px;">
       <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%" style="background-color:#ffffff;border-radius:6px;overflow:hidden;">
         <tr>
           <!-- TEXTO -->
-          <td class="mob-stack" valign="middle" width="270" style="padding:24px 16px 24px 24px;vertical-align:middle;">
+          <td class="mob-stack" valign="middle" width="215" style="width:215px;padding:20px 14px 20px 0;vertical-align:middle;">
             <h2 style="margin:0 0 12px 0;font-family:Arial,Helvetica,sans-serif;font-size:15px;font-weight:700;color:#1a1a1a;line-height:23px;">
               Ubicación en tiempo real: visibilidad que impulsa la operación
             </h2>
@@ -126,19 +125,17 @@
             </p>
           </td>
           <!-- IMAGEN con botón superpuesto abajo derecha -->
-          <td class="mob-stack mob-img-full" valign="top" width="270" style="padding:0;vertical-align:top;">
-            <img src="images/imagen_2.png"
-                 alt="Ubicación en tiempo real" width="270"
-                 style="display:block;width:100%;height:auto;">
-            <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%" style="background-color:#ffffff;">
-              <tr>
-                <td align="right" style="padding:7px 10px;">
-                  <a href="#" style="display:inline-block;background-color:#005EB8;color:#ffffff;font-family:Arial,Helvetica,sans-serif;font-size:11px;font-weight:700;padding:7px 16px;border-radius:3px;text-decoration:none;">
-                    Ver nota completa
-                  </a>
-                </td>
-              </tr>
-            </table>
+          <td class="mob-stack mob-img-full" valign="top" style="padding:0;vertical-align:top;position:relative;">
+            <div style="position:relative;font-size:0;line-height:0;">
+              <img src="images/imagen_superior.png"
+                   alt="Ubicación en tiempo real"
+                   style="display:block;width:100%;height:auto;border-radius:8px;">
+              <div style="position:absolute;bottom:12px;right:12px;font-size:12px;line-height:normal;">
+                <a href="#" style="display:inline-block;background-color:#0047fa;color:#ffffff;font-family:Arial,Helvetica,sans-serif;font-size:11px;font-weight:700;padding:8px 16px;border-radius:4px;text-decoration:none;">
+                  Ver nota completa
+                </a>
+              </div>
+            </div>
           </td>
         </tr>
       </table>
@@ -147,61 +144,55 @@
 
 
   <!-- ─────────────────────────────────────────────
-       5. GRID OSCURO
-       [  Conectividad (texto izq + imagen der)  |  Teal card  ]
-       [                                          |  Imagen tablet ]
-       [  Datos en movimiento (full width)        |  Botón  ]
-  ───────────────────────────────────────────── -->
-  <!-- ─────────────────────────────────────────────
-       5. GRID MASONRY: 2 columnas independientes sobre fondo blanco
-       Columna izq (fluye sola): [Conectividad tall] + [Datos en movimiento]
-       Columna der (fluye sola): [Más contenido short] + [imagen-4 tall]
+       5. GRID: 2 columnas con proporción 57% / 43%
+       Columna izq (más ancha): [Conectividad] + [Datos en movimiento]
+       Columna der (más angosta): [Más contenido] + [imagen tablet]
   ───────────────────────────────────────────── -->
   <tr>
-    <td style="background-color:#ffffff;padding:12px 12px 16px 12px;">
-      <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%">
+    <td style="background-color:#ffffff;padding:12px 15px 16px 15px;">
+      <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="576">
         <tr>
 
-          <!-- ══ COLUMNA IZQUIERDA: cards apiladas independientemente ══ -->
-          <td class="grid-col" valign="top" width="284" style="width:284px;padding-right:6px;vertical-align:top;">
+          <!-- ══ COLUMNA IZQUIERDA: 57% (~326px) ══ -->
+          <td class="grid-col" valign="top" width="326" style="width:326px;padding-right:8px;vertical-align:top;">
 
             <!-- Card 1: Conectividad (navy) -->
             <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%" style="background-color:#001B5E;border-radius:10px;overflow:hidden;">
               <tr>
                 <!-- Texto + botón -->
-                <td class="conect-text" valign="middle" style="padding:20px 8px 20px 18px;vertical-align:middle;">
-                  <h2 class="conect-title" style="margin:0 0 16px 0;font-family:Arial,Helvetica,sans-serif;font-size:14px;font-weight:700;color:#ffffff;line-height:22px;max-width:140px;">
+                <td class="conect-text" valign="middle" style="padding:22px 8px 22px 18px;vertical-align:middle;">
+                  <h2 class="conect-title" style="margin:0 0 18px 0;font-family:Arial,Helvetica,sans-serif;font-size:14px;font-weight:700;color:#ffffff;line-height:22px;max-width:140px;">
                     Conectividad y productividad empresarial en la era digital
                   </h2>
-                  <a href="#" style="display:inline-block;background-color:#005EB8;color:#ffffff;font-family:Arial,Helvetica,sans-serif;font-size:11px;font-weight:700;padding:8px 14px;border-radius:4px;text-decoration:none;">
+                  <a href="#" style="display:inline-block;background-color:#0047fa;color:#ffffff;font-family:Arial,Helvetica,sans-serif;font-size:11px;font-weight:700;padding:8px 14px;border-radius:4px;text-decoration:none;">
                     Ver nota completa
                   </a>
                 </td>
                 <!-- Imagen -->
-                <td class="conect-img" valign="top" width="135" style="padding:0;vertical-align:top;width:135px;font-size:0;line-height:0;border-radius:0 10px 10px 0;overflow:hidden;">
+                <td class="conect-img" valign="top" width="148" style="padding:0;vertical-align:top;width:148px;font-size:0;line-height:0;overflow:hidden;border-radius:0 10px 10px 0;">
                   <img src="images/imagen-3.png" alt="Conectividad"
-                       style="display:block;width:100%;height:100%;min-height:180px;object-fit:cover;">
+                       style="display:block;width:100%;height:100%;min-height:185px;object-fit:cover;">
                 </td>
               </tr>
             </table>
 
-            <!-- 10px entre cards -->
+            <!-- Separador entre cards -->
             <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%">
               <tr><td style="height:10px;line-height:10px;font-size:10px;">&nbsp;</td></tr>
             </table>
 
-            <!-- Card 2: Datos en movimiento — padding ampliado para igualar altura con imagen-4 -->
+            <!-- Card 2: Datos en movimiento -->
             <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%" style="background-color:#1565C0;border-radius:10px;">
               <tr>
-                <td class="datos-title-td" style="padding:44px 18px 10px 18px;">
+                <td class="datos-title-td" style="padding:28px 18px 8px 18px;">
                   <h2 style="margin:0;font-family:Arial,Helvetica,sans-serif;font-size:14px;font-weight:700;color:#ffffff;line-height:22px;">
                     Datos en movimiento:<br>el nuevo valor empresarial
                   </h2>
                 </td>
               </tr>
               <tr>
-                <td class="datos-btn-td" style="padding:8px 18px 16px 18px;text-align:right;">
-                  <a href="#" style="display:inline-block;background-color:#005EB8;color:#ffffff;font-family:Arial,Helvetica,sans-serif;font-size:11px;font-weight:700;padding:8px 16px;border-radius:4px;text-decoration:none;">
+                <td class="datos-btn-td" style="padding:12px 18px 22px 18px;text-align:center;">
+                  <a href="#" style="display:inline-block;background-color:#0047fa;color:#ffffff;font-family:Arial,Helvetica,sans-serif;font-size:11px;font-weight:700;padding:8px 16px;border-radius:4px;text-decoration:none;">
                     Ver nota completa
                   </a>
                 </td>
@@ -210,14 +201,14 @@
 
           </td>
 
-          <!-- ══ COLUMNA DERECHA: cards apiladas independientemente ══ -->
-          <td class="grid-col right-col-flex" valign="top" width="284" style="width:284px;padding-left:0;vertical-align:top;">
+          <!-- ══ COLUMNA DERECHA: 43% (~242px) ══ -->
+          <td class="grid-col right-col-flex" valign="top" width="242" style="width:242px;vertical-align:top;">
 
-            <!-- Card 3: Más contenido — order 2 en mobile (va debajo de imagen) -->
+            <!-- Card 3: Más contenido (más compacta) -->
             <table class="mas-contenido-card" role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%" style="background-color:#1565C0;border-radius:10px;">
               <tr>
-                <td style="padding:28px 22px 28px 22px;">
-                  <p style="margin:0;font-family:Arial,Helvetica,sans-serif;font-size:16px;font-weight:700;color:#ffffff;line-height:26px;">
+                <td style="padding:22px 20px 22px 20px;">
+                  <p style="margin:0;font-family:Arial,Helvetica,sans-serif;font-size:15px;font-weight:700;color:#ffffff;line-height:24px;">
                     Más contenido<br>para tu negocio
                     <a href="#" style="color:#7FECFF;text-decoration:underline;font-weight:700;"> aquí</a>
                   </p>
@@ -225,14 +216,14 @@
               </tr>
             </table>
 
-            <!-- Espacio mínimo entre Más contenido e imagen tablet -->
+            <!-- Espacio entre Más contenido e imagen tablet -->
             <table class="tab-spacer" role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%">
-              <tr><td style="height:2px;line-height:2px;font-size:2px;">&nbsp;</td></tr>
+              <tr><td style="height:8px;line-height:8px;font-size:8px;">&nbsp;</td></tr>
             </table>
 
-            <!-- Card 4: imagen tablet — order 1 en mobile (va primero) -->
-            <img class="imagen-tablet" src="images/imagen-4.png" alt="Datos empresariales" width="284"
-                 style="display:block;width:100%;height:auto;border-radius:10px;margin-top:-18px;">
+            <!-- Card 4: imagen tablet -->
+            <img class="imagen-tablet" src="images/imagen-4.png" alt="Datos empresariales" width="242"
+                 style="display:block;width:100%;height:auto;border-radius:10px;">
 
           </td>
 
@@ -246,12 +237,12 @@
        6. CITA
   ───────────────────────────────────────────── -->
   <tr>
-    <td style="background-color:#ffffff;padding:36px 36px 28px 36px;text-align:center;">
+    <td style="background-color:#ffffff;padding:32px 15px 24px 15px;text-align:center;">
       <p style="margin:0 0 14px 0;font-family:Arial,Helvetica,sans-serif;font-size:20px;line-height:26px;color:#1a1a1a;text-align:center;">
-        <span style="font-family:Georgia,serif;font-size:26px;color:#005EB8;vertical-align:middle;">&ldquo;</span>
+        <span style="font-family:Georgia,serif;font-size:26px;color:#0047fa;vertical-align:middle;">&ldquo;</span>
         <strong>Siete de cada diez negocios</strong> mejoran su operación,<br>
         cuando integran soluciones tecnológicas.
-        <span style="font-family:Georgia,serif;font-size:26px;color:#005EB8;vertical-align:middle;">&rdquo;</span>
+        <span style="font-family:Georgia,serif;font-size:26px;color:#0047fa;vertical-align:middle;">&rdquo;</span>
       </p>
       <p style="margin:0;font-family:Arial,Helvetica,sans-serif;font-size:14px;font-weight:700;color:#1a1a1a;text-align:center;">
         Descubre la herramienta ideal para tu negocio
@@ -261,49 +252,49 @@
 
 
   <!-- ─────────────────────────────────────────────
-       7. ICONOS DE PRODUCTOS (4 columnas)
+       7. ICONOS DE PRODUCTOS (4 columnas, centradas y compactas)
   ───────────────────────────────────────────── -->
   <tr>
-    <td style="background-color:#ffffff;padding:10px 16px 30px 16px;border-top:1px solid #eeeeee;">
-      <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%">
+    <td style="background-color:#ffffff;padding:10px 0 30px 0;border-top:1px solid #eeeeee;">
+      <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="420" align="center" style="margin:0 auto;">
         <tr>
 
           <!-- Icono 1 -->
-          <td class="icon-cell" align="center" valign="top" width="25%" style="padding:0 6px;">
+          <td class="icon-cell" align="center" valign="top" width="25%" style="padding:0 8px;">
             <img src="images/Monitoreo-y-rastreo-de-vehículos.png"
-                 alt="Monitoreo y rastreo de vehículos" width="80" height="80"
-                 style="display:block;margin:0 auto;width:80px;height:80px;">
-            <p style="margin:0;font-family:Arial,Helvetica,sans-serif;font-size:13px;line-height:16px;color:#333333;text-align:center;">
+                 alt="Monitoreo y rastreo de vehículos" width="68" height="68"
+                 style="display:block;margin:0 auto;width:68px;height:68px;">
+            <p style="margin:6px 0 0 0;font-family:Arial,Helvetica,sans-serif;font-size:12px;line-height:16px;color:#333333;text-align:center;">
               Monitoreo y<br>rastreo de<br>vehículos
             </p>
           </td>
 
           <!-- Icono 2 -->
-          <td class="icon-cell" align="center" valign="top" width="25%" style="padding:0 6px;">
+          <td class="icon-cell" align="center" valign="top" width="25%" style="padding:0 8px;">
             <img src="images/Líneas-corporativas.png"
-                 alt="Líneas corporativas" width="80" height="80"
-                 style="display:block;margin:0 auto;width:80px;height:80px;">
-            <p style="margin:0;font-family:Arial,Helvetica,sans-serif;font-size:13px;line-height:16px;color:#333333;text-align:center;">
+                 alt="Líneas corporativas" width="68" height="68"
+                 style="display:block;margin:0 auto;width:68px;height:68px;">
+            <p style="margin:6px 0 0 0;font-family:Arial,Helvetica,sans-serif;font-size:12px;line-height:16px;color:#333333;text-align:center;">
               Líneas<br>corporativas
             </p>
           </td>
 
           <!-- Icono 3 -->
-          <td class="icon-cell" align="center" valign="top" width="25%" style="padding:0 6px;">
+          <td class="icon-cell" align="center" valign="top" width="25%" style="padding:0 8px;">
             <img src="images/Control-de-combustible.png"
-                 alt="Líneas Control de combustible" width="80" height="80"
-                 style="display:block;margin:0 auto;width:80px;height:80px;">
-            <p style="margin:0;font-family:Arial,Helvetica,sans-serif;font-size:13px;line-height:16px;color:#333333;text-align:center;">
+                 alt="Líneas Control de combustible" width="68" height="68"
+                 style="display:block;margin:0 auto;width:68px;height:68px;">
+            <p style="margin:6px 0 0 0;font-family:Arial,Helvetica,sans-serif;font-size:12px;line-height:16px;color:#333333;text-align:center;">
               Líneas Control<br>de combustible
             </p>
           </td>
 
           <!-- Icono 4 -->
-          <td class="icon-cell" align="center" valign="top" width="25%" style="padding:0 6px;">
+          <td class="icon-cell" align="center" valign="top" width="25%" style="padding:0 8px;">
             <img src="images/Internet-empresarial.png"
-                 alt="Internet empresarial" width="80" height="80"
-                 style="display:block;margin:0 auto;width:80px;height:80px;">
-            <p style="margin:0;font-family:Arial,Helvetica,sans-serif;font-size:13px;line-height:16px;color:#333333;text-align:center;">
+                 alt="Internet empresarial" width="68" height="68"
+                 style="display:block;margin:0 auto;width:68px;height:68px;">
+            <p style="margin:6px 0 0 0;font-family:Arial,Helvetica,sans-serif;font-size:12px;line-height:16px;color:#333333;text-align:center;">
               Internet<br>empresarial
             </p>
           </td>
@@ -318,7 +309,7 @@
        8. FOOTER
   ───────────────────────────────────────────── -->
   <tr>
-    <td style="background-color:#001B5E;padding:18px 28px;">
+    <td style="background-color:#001B5E;padding:18px 15px;">
       <p style="margin:0 0 4px 0;font-family:Arial,Helvetica,sans-serif;font-size:11px;line-height:17px;color:#ffffff;text-align:center;">
         Telcel Corporativo. Lago Zurich No. 245 Col. Ampliación Granada<br>
         Ciudad de México D.F. 11529 México
